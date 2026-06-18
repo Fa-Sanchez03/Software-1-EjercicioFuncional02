@@ -27,8 +27,21 @@ public class Linea {
     }
 
     public void setArticulo(String a) {
+
+    if (a == null || a.trim().isEmpty()) {
+        System.out.println(
+                "El nombre del artículo es obligatorio."
+        );
+    }
+    else if (a.trim().length() < 3) {
+        System.out.println(
+                "El nombre del artículo debe tener al menos 3 caracteres."
+        );
+    }
+    else {
         mArticulo = a;
     }
+}
 
     public String getArticulo() {
         return mArticulo;
