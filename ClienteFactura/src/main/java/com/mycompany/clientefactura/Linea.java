@@ -35,7 +35,12 @@ public class Linea {
     }
 
     public void setPrecio(double p) {
-        mPrecio = p;
+        if (p < 0) {
+            System.out.println("No se puede actualizar el precio a algo menor que 0");
+        }
+        else {
+            mPrecio = p;
+        }
     }
 
     public double getPrecio() {
